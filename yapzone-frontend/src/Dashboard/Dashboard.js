@@ -15,8 +15,6 @@ const Wrapper = styled('div')({
     display: 'flex',
 });
 
-let num_call = 1;
-
 const Dashboard = () => {
     const [isLoading, setIsLoading] = useState(true);
     const dispatch = useDispatch();
@@ -31,8 +29,6 @@ const Dashboard = () => {
             connectWithSocketServer(JSON.parse(userDetails));
             setIsLoading(false);
         }
-        console.log('This is to check how many times this rendered or called --> '+ num_call);
-        num_call+=1;
     }, []);
 
     if(isLoading) {

@@ -35,4 +35,9 @@ export const connectWithSocketServer = (userDetails) => {
         const {onlineUsers} = data;
         store.dispatch(setOnlineUsers(onlineUsers));
     });
-}
+};
+
+export const sendDirectMessage = (data) => {
+    console.log(data);
+    socket.emit('direct-message', data);
+};
