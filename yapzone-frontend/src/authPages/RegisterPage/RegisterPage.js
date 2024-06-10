@@ -60,10 +60,4 @@ const RegisterPage = ({ register }) => {
     );
 };
 
-const mapActionsToProps = (dispatch) => {
-    return {
-        ...getActions(dispatch),
-    };
-}
-
 export default RegisterPage;

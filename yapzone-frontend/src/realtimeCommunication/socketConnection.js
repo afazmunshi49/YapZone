@@ -5,10 +5,14 @@ import {updateDirectChatHistoryIfActive} from '../shared/utils/chat';
 
 let socket = null;
 
+const PORT = process.env.REACT_APP_BACKEND_URL;
+
+console.log('Backend URL:', PORT);
+
 export const connectWithSocketServer = (userDetails) => {
     const jwtToken = userDetails.token;
     
-    socket = io('http://localhost:5002', {
+    socket = io(PORT, {
         auth: {
             token: jwtToken,
         }
