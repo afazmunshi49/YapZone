@@ -23,7 +23,7 @@ RUN npm run build
 RUN npm install -g serve
 
 # Set environment variables for serve
-ENV REACT_APP_BACKEND_URL=https://yapzone.onrender.com/
+ENV REACT_APP_BACKEND_URL=http://15.223.6.165:5002
 
 # Command to run the application
 CMD ["serve", "-s", "build"]
