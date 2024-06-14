@@ -30,6 +30,8 @@ mongoose.connect(process.env.MONGO_URI)
     server.listen(PORT, () => {
         console.log(`Server is listening on ${PORT}`)
     });
+     // Run keep-alive script
+     require('./keepAlive');
 })
 .catch(err => {
     console.log("Database connection failed. Server not started.");
